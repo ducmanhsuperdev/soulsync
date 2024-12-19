@@ -35,11 +35,13 @@ function checkWidth() {
 
     if (window.innerWidth <= 1024 || window.innerWidth > 2048) {
         body.style.display = 'none';
+        check.style.display = 'block';
 
 
     } else {
 
         body.style.display = 'block';
+        check.style.display = 'none';
     }
 }
 
