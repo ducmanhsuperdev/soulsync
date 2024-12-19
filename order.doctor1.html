@@ -4,38 +4,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Đặt lịch tư vấn</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Đặt lịch tư vấn - SoulSync</title>
     <link rel="stylesheet" href="./assets/css/order.doctor.css">
+
 </head>
 
 <body>
-    <div class="container">
-        <div class="profile-section">
-            <img src="doctor.jpg" alt="Dr Meghan Carter" class="profile-image">
-            <h2 class="name">Dr Meghan Carter</h2>
-            <p class="details">Bác sĩ &nbsp;&nbsp; | &nbsp;&nbsp; 3 Năm</p>
-            <p class="rating">Đánh giá: ⭐⭐⭐⭐⭐</p>
+    <header>
+        <div class="logo">SoulSync</div>
+        <nav>
+            <ul>
+                <li>Trang chủ</li>
+                <li>Về chúng tôi</li>
+                <li class="active">Đặt lịch tư vấn</li>
+                <li>The Soul AI</li>
+                <li>Diễn đàn</li>
+                <li>Liên hệ</li>
+            </ul>
+        </nav>
+        <div class="auth">
+            <button>Đăng nhập</button>
+            <button class="register">Đăng ký</button>
         </div>
-        <div class="form-section">
-            <div class="input-group">
-                <span class="icon">☰</span>
-                <input type="text" placeholder="Thời gian bạn muốn tư vấn">
-                <span class="icon">🔍</span>
+    </header>
+    <main>
+        <section class="consultation-card">
+            <div class="profile">
+                <img src="doctor.jpg" alt="Dr Meghan Carter" class="profile-img">
+                <h2>Dr Meghan Carter</h2>
+                <p>Bác sĩ &nbsp; | &nbsp; 3 Năm kinh nghiệm</p>
+                <p class="rating">Đánh giá: ⭐⭐⭐⭐⭐</p>
             </div>
-            <div class="input-group">
-                <span class="icon">☰</span>
-                <input type="text" placeholder="Hãy mô tả sơ lược vấn đề bạn mắc phải hiện tại">
-                <span class="icon">🔍</span>
+            <div class="form">
+                <div class="form-group">
+                    <label>Thời gian bạn muốn tư vấn</label>
+                    <input type="datetime-local">
+                </div>
+                <div class="form-group">
+                    <label>Mô tả sơ lược vấn đề bạn gặp phải hiện tại</label>
+                    <textarea placeholder="Nhập mô tả vấn đề..."></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Đánh giá dịch vụ</label>
+                    <select>
+                        <option value="5">5 Sao</option>
+                        <option value="4">4 Sao</option>
+                        <option value="3">3 Sao</option>
+                        <option value="2">2 Sao</option>
+                        <option value="1">1 Sao</option>
+                    </select>
+                </div>
+                <button class="submit-btn">Đặt lịch</button>
             </div>
-            <div class="input-group">
-                <span class="icon">☰</span>
-                <input type="text" placeholder="Đánh giá dịch vụ">
-                <span class="icon">🔍</span>
-            </div>
-            <button class="submit-btn">Đặt lịch</button>
-        </div>
-    </div>
+        </section>
+    </main>
+    <script src="./assets/js/doctorscript.js"></script>
 </body>
 
 </html>
