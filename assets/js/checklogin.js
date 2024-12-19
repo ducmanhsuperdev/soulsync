@@ -5,9 +5,11 @@ const buttonlogout = document.querySelector(".dropdown-item");
 
 
 const client_id = `543620233929-6ft6cajn8s7unf19e79f8io5h00g3drp.apps.googleusercontent.com`;
+const url1 = 'https://ducmanhsuperdev.github.io/soulsync';
+const url2 = 'http//127.0.0.1:5500';
 
 const GET_LINK_TOKEN = `
-https://accounts.google.com/o/oauth2/v2/auth?scope=https://www.googleapis.com/auth/userinfo.email%20https://www.googleapis.com/auth/userinfo.profile&response_type=token&redirect_uri=http://127.0.0.1:5500/&client_id=${client_id}
+https://accounts.google.com/o/oauth2/v2/auth?scope=https://www.googleapis.com/auth/userinfo.email%20https://www.googleapis.com/auth/userinfo.profile&response_type=token&redirect_uri=https://ducmanhsuperdev.github.io/soulsync&client_id=${client_id}
 `
 document.addEventListener("DOMContentLoaded", () => {
     const signBtn = document.querySelector(".sign_btn");

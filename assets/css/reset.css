@@ -66,7 +66,7 @@
 
 
 /* Màn hình lớn hơn 2048px */
-@media (min-width: 2049px) {
+@media (min-width: 2048px) {
 
     /* Các quy tắc CSS cho màn hình lớn hơn 2048px */
     .wrapper {
