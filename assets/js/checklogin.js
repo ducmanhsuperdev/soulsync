@@ -9,7 +9,7 @@ const url1 = 'https://ducmanhsuperdev.github.io/soulsync';
 const url2 = 'http//127.0.0.1:5500';
 
 const GET_LINK_TOKEN = `
-https://accounts.google.com/o/oauth2/v2/auth?scope=https://www.googleapis.com/auth/userinfo.email%20https://www.googleapis.com/auth/userinfo.profile&response_type=token&redirect_uri=https://ducmanhsuperdev.github.io/soulsync&client_id=${client_id}
+https://accounts.google.com/o/oauth2/v2/auth?scope=https://www.googleapis.com/auth/userinfo.email%20https://www.googleapis.com/auth/userinfo.profile&response_type=token&redirect_uri=http://127.0.0.1:5500&client_id=${client_id}
 `
 document.addEventListener("DOMContentLoaded", () => {
     const signBtn = document.querySelector(".sign_btn");
@@ -104,15 +104,24 @@ function checklogin() {
 
 
 
-function checkLinkAccess() {
-    localStorage.setItem('userdata', userdata.name);
-    const userName = JSON.parse(localStorage.getItem('userdata'));
-    if (!userName) {
-        alert("Bạn cần đăng nhập để truy cập đường link này.");
+function checkLinkAccess(event) {
+
+    // localStorage.setItem('logged', userdata.name);
+    const logged = JSON.parse(localStorage.getItem('logged'));
+    console.log(logged);
+
+    if (logged == false) {
+        event.preventDefault();
+        alert("Bạn cần đăng nhập để tiếp tục.");
         window.location.href = "login.html"; // Chuyển đến trang đăng nhập nếu chưa đăng nhập
         return false; // Ngăn không cho truy cập
     }
     return true; // Cho phép truy cập
+}
+
+
+function testlog() {
+
 }
 
 

@@ -71,10 +71,11 @@ main {
 }
 
 .profile-img {
-    width: 100px;
-    height: 100px;
+    width: 180px;
+    height: 180px;
     border-radius: 50%;
-    object-fit: cover;
+    margin: 0px auto;
+    background-size: cover;
 }
 
 .profile h2 {

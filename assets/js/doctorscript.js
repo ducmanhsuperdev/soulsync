@@ -6,6 +6,15 @@ document.querySelector('.submit-btn').addEventListener('click', function () {
     if (!time || !description) {
         alert('Vui lòng điền đầy đủ thông tin trước khi đặt lịch.');
     } else {
-        alert(`Lịch đã được đặt!\nThời gian: ${time}\nMô tả: ${description}\nĐánh giá: ${rating} sao`);
+        const checkcon = confirm(`Bạn có muốn xác nhận đặt lịch không? !\nThời gian: ${time}\nMô tả: ${description}\nĐánh giá: ${rating} sao`);
+
+        if (checkcon) {
+            alert("lịch được đặt thành công");
+            window.location.href = 'index.html';
+        }
+        else {
+            alert('rất tiếc, bạn đã hủy lịch rồi !')
+        }
+
     }
 });
